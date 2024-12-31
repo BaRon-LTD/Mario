@@ -46,7 +46,7 @@ public class DeathAnimation : MonoBehaviour
         }
 
         if (TryGetComponent(out PlayerMovement playerMovement)) {
-            playerMovement.enabled = false;
+            playerMovement.Disable();
         }
 
         if (TryGetComponent(out EntityMovement entityMovement)) {

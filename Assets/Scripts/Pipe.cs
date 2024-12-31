@@ -20,7 +20,7 @@ public class Pipe : MonoBehaviour
 
     private IEnumerator Enter(Player player)
     {
-        player.movement.enabled = false;
+        player.movement.Disable();
 
         Vector3 enteredPosition = transform.position + enterDirection;
         Vector3 enteredScale = Vector3.one * 0.5f;
@@ -42,7 +42,7 @@ public class Pipe : MonoBehaviour
             player.transform.localScale = Vector3.one;
         }
 
-        player.movement.enabled = true;
+        player.movement.Enable();
     }
 
     private IEnumerator Move(Transform player, Vector3 endPosition, Vector3 endScale)
